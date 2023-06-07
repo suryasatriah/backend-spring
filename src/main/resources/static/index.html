@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Backend Program</h1>
+    <p>Jangan lupa setelah input refresh,</p>
+    <div class="grid-container">
+      <div>
+        <h2>Tabel Nasabah</h2>
+        <button type="button" id="reset-account">Reset Account</button>
+        <table id="AccountTable"></table>
+        <h2>Tabel Transaksi</h2>
+        <button type="button" id="reset-transaction">Reset Transaction</button>
+        <table id="TransactionTable"></table>
+        <h2>Tabel Point</h2>
+        <table id="PointTable"></table>
+        <h2>Tabel Buku Tabungan</h2>
+        <form id="setDateIntervalForm">
+          <label>Start date: </label>
+          <input id="start-date" type="date" aria-label="start-date" />
+          <label>End date: </label>
+          <input id="end-date" type="date" aria-label="end-date" />
+          <input type="submit" value="Show" />
+        </form>
+        &nbsp;
+        <table id="SavingTable"></table>
+      </div>
+      <div>
+        <h2>Input Nasabah</h2>
+        <form id="addAccountForm">
+          <label>Name : </label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            aria-label="name-input"
+            placeholder="Insert name..."
+            required
+          />
+          <input type="submit" value="Add" />
+        </form>
+        <h2>Input Transaksi</h2>
+        <form id="addTransactionForm">
+          <table>
+            <tr>
+              <td>Account ID :</td>
+              <td>
+                <input
+                  id="account_id"
+                  type="text"
+                  name="id"
+                  aria-label="id-input"
+                  placeholder="Insert id..."
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Date :</td>
+              <td>
+                <input
+                  id="date"
+                  type="date"
+                  name="date"
+                  aria-label="date-input"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Description :</td>
+              <td>
+                <input
+                  id="description"
+                  type="text"
+                  name="description"
+                  aria-label="description-input"
+                  placeholder="Insert description..."
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Debit/Credit :</td>
+              <td>
+                <input
+                  id="debitCreditStatus"
+                  type="text"
+                  name="debitCreditStatus"
+                  aria-label="dcs-input"
+                  placeholder="Insert status..."
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Amount :</td>
+              <td>
+                <input
+                  id="amount"
+                  type="text"
+                  name="amount"
+                  aria-label="amount-input"
+                  placeholder="Insert amount..."
+                  required
+                />
+              </td>
+            </tr>
+          </table>
+          <div>&nbsp;</div>
+          <input type="submit" value="Add" />
+        </form>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
