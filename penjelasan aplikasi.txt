@@ -1,0 +1,33 @@
+Surya Satria Hidayat
+2023/06/07
+
+Penjelasan aplikasi:
+
+1. Terdapat 2 model data:
+	a. account(nasabah) yang berisi id, nama, dan poin
+	b. transaction yang berisi id, joint account, description, status(d/c), dan amount.
+2. Endpoint2 aplikasi ditaruh pada package controller, dan logika untuk mengatur point ditaruh pada package service.
+3. Project menggunakan beberapa depedency diantaranya jpa, lombok
+4. Untuk mempermudah visualisasi, saya menambahkan file html untuk mengoperasikan endpoint pada springboot. 
+
+
+Menjalankan aplikasi:
+1. clone repository:
+
+git@github.com:suryasatriah/backend-spring.git
+
+atau
+
+https://github.com/suryasatriah/backend-spring.git
+
+2. jalankan program menggunakan intellij/eclipse/vsc
+
+3. edit file application.properties, sesuaikan dengan database dan konfigurasi pc(basicnya pake postgres, untuk mysql depedency sdh ditambahkan).
+
+4. Run aplikasi springboot.
+
+5. Untuk mempermudah mengakses dan menguji endpoint, saya membuat halaman yang bisa diakses melalui port :8080.
+
+http://localhost:8080/
+
+
